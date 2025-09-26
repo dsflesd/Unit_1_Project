@@ -1,0 +1,34 @@
+
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the total bill: ");
+        double totalBill = scan.nextDouble();
+        System.out.print("Enter the tip percentage: ");
+        int tipPercentage = scan.nextInt();
+        System.out.print("Enter number of people: ");
+        int numberOfPeople = scan.nextInt();
+        System.out.println(totalBill);
+
+        double totalTipAmount = (double)totalBill* (int)tipPercentage/100.0;
+        totalTipAmount = totalTipAmount/1000;
+        System.out.println(totalTipAmount);
+        totalTipAmount = totalTipAmount*1000;
+        System.out.println(totalTipAmount);
+//        System.out.println((double)totalTipAmount);
+        double totalBillWithTips = (totalTipAmount+totalBill);
+        double tipPerPerson =  totalTipAmount/ numberOfPeople;
+        double totalPerPerson =  totalBillWithTips/numberOfPeople;
+
+        System.out.printf("Total Tip Amount: $" + totalTipAmount);
+        System.out.println("Total Bill With Tips $" + totalBillWithTips);
+        System.out.println("Tip Per Person: $" + tipPerPerson);
+        System.out.println("Total Per Person: $" + totalPerPerson);
+        scan.nextLine();
+        scan.close();
+        double i = (double)35.24/(4);
+        System.out.println(i);
+    }
+}
